@@ -6,7 +6,7 @@ See this thread for reference: [Save Polymorphic table](https://laracasts.com/di
   - Using SSH `git@github.com:alenabdula/laravel-polymorphic-relations.git`
   - Using HTTP `https://github.com/alenabdula/laravel-polymorphic-relations.git`
 2. Install framework dependencies: `composer install`, if using Laravel Elixir install Node dependencies: `npm install`
-3. Create `.env` file, configure your environment and database, see my local configuration in `.env.example` file.
+3. Create `.env` file, configure your environment and database, see my local configuration in `.env.example` file. If you decide to use sqlite, make sure to create `database.sqlite` inside `database/` directory.
 4. Migrate your database: `php artisan migrate`
 5. Start local server: `php artisan serve` and visit [localhost:8000](http://localhost:8000), if `8000` port is used, try `php artisan serve --port 8888`
 
