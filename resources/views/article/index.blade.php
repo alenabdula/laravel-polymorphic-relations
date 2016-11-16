@@ -4,8 +4,7 @@
 
     <div class="col-sm-12">
         @unless($articles->count())
-            <h1>No articles</h1>
-            <a href="{{ route('article.create') }}" class="btn btn-primary">Add New Article</a>
+            <h1>No resources found!</h1>
         @endunless
         @foreach($articles as $article)
             <h1>{{ $article->title }}</h1>
