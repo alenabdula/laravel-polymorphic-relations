@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     /**
-     * Mass Assignment Fields
+     * Mass Assignment Fields.
      */
     protected $fillable = ['body'];
 

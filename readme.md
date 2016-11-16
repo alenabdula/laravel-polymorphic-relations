@@ -1,27 +1,27 @@
-# Laravel PHP Framework
+#Getting started
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+See this thread for reference: [Save Polymorphic table](https://laracasts.com/discuss/channels/eloquent/save-polymorphic-table)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+1. Clone this repository
+  - Using SSH `git@github.com:alenabdula/laravel-polymorphic-relations.git`
+  - Using HTTP `https://github.com/alenabdula/laravel-polymorphic-relations.git`
+2. Install framework dependencies: `composer install`, if using Laravel Elixir install Node dependencies: `npm install`
+3. Create `.env` file, configure your environment and database, see my local configuration in `.env.example` file.
+4. Migrate your database: `php artisan migrate`
+5. Start local server: `php artisan serve` and visit [localhost:8000](http://localhost:8000), if `8000` port is used, try `php artisan serve --port 8888`
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+##Application Routes
 
-## Official Documentation
+1. GET: `/` - Home Route
+2. GET: `/article` - `article.index` - Display all articles
+3. POST: `/article` - `article.store` - Create article
+4. GET: `/article/create` - `article.create` - Display form to create new article
+5. GET: `/article/{article}` - `article.show` - Display particular article
+6. PUT|PATCH: `/article/{article}` - `article.update` - Update article
+7. DELETE: `/article/{article}` - `article.destroy` - Delete article
+8. GET: `/article/{article}/edit` - `article.edit` - Display form to edit article
+9. POST: `/article/{id}/comment` - `article.comment.store` - Create comment for particular article
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+##Assets
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+- __JavaScript__, I've added single method to Vue instance named `destroy`, it's used to confirm and delete particular article. It displays confirm prompt and submits form.

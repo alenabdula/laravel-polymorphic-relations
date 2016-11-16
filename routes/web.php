@@ -1,18 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
+// Home Page
+Route::get('/', 'PageController@home')->name('home');
 
-Route::get('/', function () {
-    return view('home');
-});
+// Article Resource
 Route::resource('article', 'ArticleController');
-Route::post('article/{id}/comment', 'ArticleController@comment');
+
+// Save Comment
+Route::post('article/{id}/comment', 'ArticleController@comment')->name('article.comment.store');

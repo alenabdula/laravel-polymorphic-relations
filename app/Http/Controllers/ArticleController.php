@@ -9,7 +9,11 @@ use App\Comment;
 class ArticleController extends Controller
 {
     /**
-     * Save comment
+     * Save comment.
+     *
+     * @param  \App\Article  $id
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function comment($id, Request $request)
     {
